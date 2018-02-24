@@ -1,3 +1,7 @@
+User.create(name: "aitaro", email: "a@b.c", password: "password", password_digest: "password")
+
+
+
 Book.create(:jpgno => 1, :name => "ベイシス数学", :price => 972, :publisher => "河合出版", :level => 1, :hands => 2, :layout => 2, :const => 5, :page => 352)
 Book.create(:jpgno => 2, :name => "10日あればいい（黄緑）", :price => 724, :publisher => "実教出版", :level => 1, :hands => 2, :layout => 3, :const => 3, :page => 142)
 Book.create(:jpgno => 3, :name => "これでわかる問題集", :price => 1026, :publisher => "文英堂", :level => 1, :hands => 2, :layout => 4, :const => 2, :page => 264)
