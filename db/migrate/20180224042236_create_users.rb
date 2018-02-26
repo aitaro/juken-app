@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :email
       t.string :year
-      t.string :type
+      t.string :studytype
       t.string :university
       t.string :deviation
       t.string :time

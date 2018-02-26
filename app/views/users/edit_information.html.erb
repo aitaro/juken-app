@@ -1,0 +1,64 @@
+<h1>Users#update_information</h1>
+<p>Find me in app/views/users/update_information.html.erb</p>
+
+<%= form_for @user do |f| %>
+  <div class="category">
+      <p>
+          学年
+      </p>
+      <p>
+          <%= f.select :year, ["1", "2", "3"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          文理
+      </p>
+      <p>
+          <%= f.select :studytype, ["文系", "理系"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          志望大学
+      </p>
+      <p>
+          <%= f.select :university, ["東大・京大・医学部", "早慶国公立非医", "MARCHレベル", "その他"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          現在の偏差値
+      </p>
+      <p>
+          <%= f.select :deviation, ["~40", "41~50", "51~60", "61~70", "71~"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          1日の学習時間
+      </p>
+      <p>
+          <%= f.select :time, ["1時間未満", "1~2時間", "2~3時間", "3~4時間", "4時間以上"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          参考書のスタイル
+      </p>
+      <p>
+          <%= f.select :layout, ["文字多め", "そこそこ文字多め", "普通", "そこそこ図多め", "図多め"] %>
+      </p>
+  </div>
+  <div class="category">
+      <p>
+          演習問題の量
+      </p>
+      <p>
+          <%= f.select :exercise, ["問題量重視", "そこそこ問題量重視", "普通", "そこそこ解説重視", "解説重視"] %>
+      </p>
+  </div>
+  <div class="search">
+      <%= f.submit "登録", class: "btn btn-primary" %>
+  </div>
+  <% end %>

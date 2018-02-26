@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180224074733) do
     t.string "name"
     t.string "email"
     t.string "year"
-    t.string "type"
+    t.string "studytype"
     t.string "university"
     t.string "deviation"
     t.string "time"

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user,   only: [:edit, :update]
-  
+
   def new
     @user = User.new
   end
@@ -34,11 +34,27 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit_information
+    @user = User.find(params[:id])
+  end
+
+  def update_information
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'update_information'
+    end
+  end
+
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.fetch(:user, {}).permit(:name, :email, :password,
+                                   :password_confirmation, :year, :studytype,
+                                   :university, :deviation, :time, :layout,
+                                   :exercise)
     end
     # beforeアクション
 
