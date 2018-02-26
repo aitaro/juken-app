@@ -1,0 +1,35 @@
+<% provide(:title, 'Book') %>
+<h1>参考書登録</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@book) do |f| %>
+
+      <%= f.label :name, "タイトル" %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :price, "価格" %>
+      <%= f.number_field :price, class: 'form-control' %>
+
+      <%= f.label :publisher, "出版社" %>
+      <%= f.text_field :publisher, class: 'form-control' %>
+
+      <%= f.label :level, "難易度" %>
+      <%= f.select :level, [1,2,3,4,5,6], class: 'form-control' %>
+
+      <%= f.label :hands, "文系向き(1)or理系向き(3)" %>
+      <%= f.select :hands, [1,2,3], class: 'form-control' %>
+
+      <%= f.label :layout, "レイアウト" %>
+      <%= f.select :layout, [1,2,3,4,5], class: 'form-control' %>
+
+      <%= f.label :const, "問題量" %>
+      <%= f.select :const, [1,2,3,4,5], class: 'form-control' %>
+
+      <%= f.label :page, "ページ数" %>
+      <%= f.number_field :page, class: 'form-control' %>
+
+      <%= f.submit "参考書登録", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

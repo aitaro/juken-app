@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'books/new'
+  post 'books', to: 'books#create'
   get 'users/update_information'
 
   get 'sessions/new'
