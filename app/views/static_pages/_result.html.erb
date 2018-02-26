@@ -9,8 +9,7 @@
         <div id="container">
             <div id="header">
                 <div id="title">
-                    <h1>参考書選びから</h1>
-                    <h1>勉強スケジュールまで！</h1>
+                    <h1>参考書選びから勉強スケジュールまで！</h1>
                 </div>
             </div>
             <!-- #header -->
@@ -24,6 +23,7 @@
                     そんな<%= @layouts %>で
                       <%= @excercises %>なあなたに
                     このスケジュールはいかがでしょうか？
+                    </h>
                 </div>
                 <div id="schedule">
                     <div class="book" id="book1">
@@ -39,7 +39,7 @@
                     <div class="arrowbox">
                         <div class="arrow sample"></div>
                     </div>
-                    <div class="book">
+                    <div class="book" id="book2">
                         <p><%= @message2 %></p>
                         <div class="level">
                             <p>中級</p>
@@ -52,7 +52,7 @@
                     <div class="arrowbox">
                         <div class="arrow sample"></div>
                     </div>
-                    <div class="book">
+                    <div class="book" id="book3">
                         <p><%= @message3 %></p>
                         <div class="level">
                             <p>上級</p>
@@ -77,7 +77,6 @@
                     </div>
                 </div>
             </div>
-            <p><%=link_to 'Home', '/search'%></p>
             <div id="footer">Copylight</div>
         </div>
         <!-- container -->

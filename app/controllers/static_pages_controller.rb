@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
 
     # 値の習得
     user = current_user
-    unless user[:year].nil?
+    unless user.nil?
         @year = user[:year].to_i
         @types = user[:studytype]
         @universitys = user[:university]
