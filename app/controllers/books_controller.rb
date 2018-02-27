@@ -6,7 +6,6 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    debugger
     if @book.save
       flash[:success] = "登録ありがとうございます。"
     else
