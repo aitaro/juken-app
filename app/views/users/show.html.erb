@@ -1,3 +1,6 @@
+<div class="show">
+
+
 <h1>
   こんにちは、
   <%= @user.name %>
@@ -45,3 +48,10 @@
 <content>
   <%= @user.exercise %>
 </content>
+<br>
+
+<div class="search">
+<%= button_to '参考書を調べる', root_path, method: :get, class: "btn btn-primary" %>
+</div>
+
+</div>

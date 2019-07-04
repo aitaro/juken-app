@@ -11,7 +11,6 @@ class StaticPagesController < ApplicationController
     @excercises = "問題量重視"
 
 
-
     # 値の習得
     user = current_user
     unless user.nil?
@@ -22,6 +21,12 @@ class StaticPagesController < ApplicationController
         @times = user[:time]
         @layouts = user[:layout]
         @excercises = user[:exercise]
+    end
+
+    unless @year && @types && @universitys && @deviations && @times && @layouts && @excercises
+      flash[:danger] = "情報を登録して下さい"
+      redirect_to edit_information_path(id: user.id)
+      return
     end
 
     # 代入値の数値化
